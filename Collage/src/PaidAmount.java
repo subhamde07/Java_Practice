@@ -19,15 +19,15 @@ public class PaidAmount {
             System.out.println("Congratulation!!. You got 15% discount.");
             discount = (15*total)/100;
             System.out.println("Your Discount = "+ discount);
-        }else if(total<=50000 && total>=25000){
+        }else if(total<50000 && total>=25000){
             System.out.println("Congratulation!!. You got 10% discount.");
             discount = (10*total)/100;
             System.out.println("Your Discount = "+ discount);
-        }else if(total<=25000 && total>=10000){
+        }else if(total<25000 && total>=10000){
             System.out.println("Congratulation!!. You got 5% discount.");
             discount = (5*total)/100;
             System.out.println("Your Discount = "+ discount);
-        }else if(total<=10000 && total>=5000){
+        }else if(total<10000 && total>=5000){
             System.out.println("Congratulation!!. You got 2% discount.");
             discount = (2*total)/100;
             System.out.println("Your Discount = "+ discount);
