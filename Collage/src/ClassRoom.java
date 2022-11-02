@@ -1,16 +1,15 @@
 import java.util.*;
-
 class Room {
-    int height, length, breadth;
+    double height, length, breadth;
 
-    void getValue(int l, int b, int h) {
+    void getValue(double l, double b, double h) {
         length = l;
         height = h;
         breadth = b;
     }
 
     void Volume() {
-        int v = length * breadth * height;
+        double v = length * breadth * height;
         System.out.println("Volume = " + v);
     }
 }
@@ -19,11 +18,11 @@ public class ClassRoom {
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter Length: ");
-        int l = input.nextInt();
+        double l = input.nextDouble();
         System.out.print("Enter Breadth: ");
-        int b = input.nextInt();
+        double b = input.nextDouble();
         System.out.print("Enter Height: ");
-        int h = input.nextInt();
+        double h = input.nextDouble();
 
         Room rm = new Room();
         rm.getValue(l, b, h);
