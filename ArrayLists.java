@@ -40,5 +40,8 @@ public class ArrayLists {
         // Sorting -->
         Collections.sort(list);
         System.out.println(list);
+
+        //Present or not -->
+        System.out.println(list.contains(4));
     }
 }
