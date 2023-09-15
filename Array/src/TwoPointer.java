@@ -55,6 +55,25 @@ public class TwoPointer {
         printArray(arr);
     }
 
+    static void sortSquares(int[] arr){
+        int n = arr.length;
+        int[] ans = new int[n];
+        int k=0;
+        int left = 0;
+        int right = n-1;
+        while(left<=right){
+            if( Math.abs(arr[left]) > Math.abs(arr[right]) ){
+                ans[k++] = arr[left] * arr[left];
+                left++;
+            }
+            else{
+                ans[k++] = arr[right] * arr[right];
+                right--;
+            }
+        }
+        printArray(ans);
+    }
+
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         int arr[] = {0, 0, 1, 1, 0, 1, 1};
@@ -63,5 +82,9 @@ public class TwoPointer {
 
         int arr2[] = {1, 2, 3, 4, 5, 6};
         sortArrayOddEven(arr2);
+
+        int arr3[] = {-10, -3, -2, 1, 4, 5};
+        printArray(arr3);
+        sortSquares(arr3);
     }
 }
