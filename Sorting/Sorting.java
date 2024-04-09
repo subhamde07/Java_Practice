@@ -5,6 +5,11 @@ public class Sorting {
         }
         System.out.println();
     }
+    static void swap(int[] arr, int x, int y){
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
 
     static void bubbleSort(int[] arr){
         int n = arr.length;
@@ -86,13 +91,28 @@ public class Sorting {
         Merge(arr, l, mid, r);
     }
 
+    static int partition(int[] arr, int l, int r){
+        int pivot = arr[l];
+        // TODO
+    }
+    static void quickSort(int[] arr, int l, int r){
+        if(l >= r){
+            return;
+        }
+        int pivotIndex = partition(arr, l , r);
+        quickSort(arr, l, pivotIndex);
+        quickSort(arr, pivotIndex + 1, r);
+    }
+
     public static void main(String[] args) {
         int[] arr = { 4, 7, 1, 5, 2, 5, 3, 6 };
         printArray(arr);
         // bubbleSort(arr);  // Time Complexity = O(n^2)
         // selectionSort(arr);  // Time Complexity = O(n^2)
         // insertionSort(arr);  // Time Complexity = O(n^2) | O(n) [Bast Case]
-        mergeSort(arr, 0, arr.length-1);    // Time Complexity = O(n log(n))
+        // mergeSort(arr, 0, arr.length-1);    // Time Complexity = O(n log(n))
+        quickSort(arr, 0, arr.length - 1);   // Time Complexity = O(n log(n))
+        
         printArray(arr);
     }
-}
+}  
