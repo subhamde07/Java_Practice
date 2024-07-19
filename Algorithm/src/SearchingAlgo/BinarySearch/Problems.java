@@ -1,4 +1,4 @@
-package BinarySearch;
+package SearchingAlgo.BinarySearch;
 
 public class Problems {
     public static int firstOccurence(int[] arr, int value){

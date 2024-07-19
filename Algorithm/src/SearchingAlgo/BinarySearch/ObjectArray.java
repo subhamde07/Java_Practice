@@ -1,4 +1,4 @@
-package BinarySearch;
+package SearchingAlgo.BinarySearch;
 
 class Account{
     int a;
