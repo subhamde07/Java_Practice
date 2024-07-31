@@ -1,23 +1,15 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 
+class A{
+    public static int fun(int a, int b){
+        return a+b;
+    }
+}
 public class Temp {
     public static void main(String[] args) {
+        // 4 3 4 1 2 1
+        // int[] arr = {4, 3, 4, 1, 2, 1};
 
-        String t = "ssdaptas";
-        HashMap<Character, ArrayList<Integer>> map = new HashMap<>();
-        int tl = t.length();
-        for(int i=0 ; i<tl ; i++){
-            if(map.containsKey(t.charAt(i))){
-                map.get(t.charAt(i)).add(i);
-            }
-            else{
-                ArrayList<Integer> list = new ArrayList<>();
-                list.add(i);
-                map.put(t.charAt(i), list);
-            }
-        }
-
-        System.out.println(map);
+        int c = A.fun(4, 5);
+        System.out.println(c);
     }
 }

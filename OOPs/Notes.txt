@@ -1,5 +1,0 @@
-
-Difference between class and array?
-> array can store similar datatype of multiple object, but class can store multiple attribute. 
-
-Why we create a class outside?
